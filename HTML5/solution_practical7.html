@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script>
+	function language(){
+		return "<option>Tiếng Anh</option><option>Tiếng Pháp</option><option>Tiếng Đức</option><option>Tiếng Trung</option><option>Tiếng Nhật</option><option>Tiếng Hàn</option><option>Khác</option>"
+	}
+</script>
+<body>
+<section>
+	<fieldset>
+		<legend>Thông tin về kỹ năng</legend>
+		<fieldset>
+			<legend>Ngoại ngữ</legend>
+			<label style="width: 20%;float: left;">Trình độ Ngoại ngữ: </label>
+			<section>
+				<select>
+					<option hidden>.... Chọn Ngoại ngữ ....</option>
+					<script>document.write(language())</script>
+			    </select>
+		    </section>
+		</fieldset>
+		<fieldset>
+			<legend>Kỹ năng vi tính</legend>
+			<section>
+				<select>
+					<option hidden>.... Chọn Ngoại ngữ ....</option>
+					<script>document.write(language())</script>
+			    </select>
+		    </section>
+		</fieldset>
+		<fieldset>
+			<legend>Kỹ năng "mềm"</legend>
+		</fieldset>
+		<fieldset>
+			<legend>Kỹ năng "khác"</legend>
+		</fieldset>
+	</fieldset>
+</section>
+</body>
+</html>

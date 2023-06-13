@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "BaiTap18_2_bai2/1.0.0": {
+        "runtime": {
+          "BaiTap18_2_bai2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BaiTap18_2_bai2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

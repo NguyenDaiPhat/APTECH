@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="lab9-bai1.css">
+</head>
+<body>
+<div>
+	<form name="frmm">
+		<fieldset>
+			<div>
+				<div class="cc1"><label>Tên học viên</label></div>
+				<div class="cc2"><input type="text" name="hv" style="width: 80%;" required></div>
+			</div>
+			<div>
+				<div class="cc1"><label>Số điện thoại</label></div>
+				<div class="cc2"><input type="number" name="sdt" style="width: 80%;" required></div>
+			</div>
+			<div>
+				<input type="submit" name="" value="Kiem tra" onclick="check()">
+			</div>
+		</fieldset>
+	</form>
+</div>
+<script>
+	function check(){
+		with(frmm){
+			let m= /\w/
+			if (m.test(hv.value)==true)alert("Match")
+				else alert("Not Macth")
+		}
+	}
+</script>
+</body>
+</html>

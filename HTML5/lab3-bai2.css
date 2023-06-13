@@ -1,0 +1,21 @@
+.header,.menu-top,.menu-left,.body,.right{float: left;border: #989898 1px solid;
+	box-sizing: border-box;}
+.header,.menu-top{width: 100%;}
+.header{min-height: 100px;}
+.header>div:first-child{float: left;width: 15%;height: 100px;boder-right: 
+	#989898 1px solid; text-align: center;line-height: 100px;box-sizing: border-box;}
+.header>div:last-child{float: left;width: 85%;height: 100px;text-align: center;line-height: 
+	100px;box-sizing: border-box;}
+.menu-top{min-height: 50px;}
+.menu-top>a{color:  blue; font-weight: bold;text-transform: uppercase;line-height: 50px;float: left;
+text-align: center;box-sizing: border-box;border-right: #989898 1px solid;}
+.menu-top>a:first-child{width: 15%;}
+.menu-top>a:nth-child(2){width: 25%;}
+.menu-top>a:nth-child(3){width: 20%;}
+.menu-top>a:nth-child(4){width: 20%;}
+.menu-top>a:nth-child(5){width: 20%;}
+.menu-left,.body,.right{min-height: 500px;}
+.menu-left{width: 15%;}
+.body{width: 73%;}
+.right{width: 12%;}
+body{margin: 0;}

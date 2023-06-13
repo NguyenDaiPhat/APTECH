@@ -1,0 +1,30 @@
+.header,.menu-top,.menu-left,.body,.right{float: left;border: #989898 1px solid;box-sizing: border-box;}
+.header{width: 100%;min-height: 100px;}
+.header>div{float: left;height: 100px;box-sizing: border-box;line-height: 100px;text-align: center;}
+.header>div:first-child{border-right: #989898 1px solid;width: 15%;}
+.header>div:last-child{width: 85%;}
+.menu-top{width: 100%;min-height: 50px;}
+.menu-top>a{color: blue;font-weight: bold;text-transform: uppercase;line-height: 5px;text-align: center;box-sizing: border-box;float: left;line-height: 50px;border-right: #989898 1px solid;}
+.menu-top>a:first-child{width: 15%;}
+.menu-top>:nth-child(2),.menu-top>:nth-child(3),.menu-top>:nth-child(4){text-decoration: none;}
+.menu-top>:nth-child(2){width: 25%;}
+.menu-top>:nth-child(3),.menu-top>:nth-child(4){width: 24%;}
+.menu-top>:last-child{width: 12%;border-right: unset;}
+
+.menu-left,.body,.right{min-height: 400px;}
+
+.menu-left{width: 15%;}
+
+.menu-left>div{float: left;box-sizing: border-box;border:  #989898 1px solid;height: 49.5px;line-height: 47.5px;}
+
+.menu-left>div:nth-child(1),.menu-left>div:nth-child(6){width: 100%;}
+
+.menu-left>div:nth-child(2),.menu-left>div:nth-child(4),.menu-left>div:nth-child(7),.menu-left>div:nth-child(9),.menu-left>div:nth-child(11),.menu-left>div:nth-child(13){width: 15%;}
+
+.menu-left>div:nth-child(3),.menu-left>div:nth-child(5),.menu-left>div:nth-child(8),.menu-left>div:nth-child(10),.menu-left>div:nth-child(12),.menu-left>div:nth-child(14),
+.menu-left>div:nth-child(16){width: 85%;color: blue;}
+
+.body{width: 73%;}
+.right{width: 12%;padding: 0.1%;}
+.right>div,.right>div>div{border: 2px dotted #989898;font-size: 21px;text-align: center;}
+body{margin: 1;}

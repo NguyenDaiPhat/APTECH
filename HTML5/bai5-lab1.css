@@ -1,0 +1,7 @@
+div{text-align: center;box-sizing: border-box;float: left;}
+.dau{border: #0e0e0e 1px solid;background-color: #0e0e0e;color: white;height: 130px;margin-bottom: 5px;font-size: 20px;width: 100%;}
+.than1{border: #ff6600 1px solid;background-color: #ff6600;color: black;height: 260px;width: 19.8%;font-size: 20px;margin-right: 0.2%;}
+.than2{border: #00ff00 1px solid;background-color: #00ff00;color: black;height: 260px;width: 59.8%;font-size: 20px;margin-right: 0.2%;}
+.than3{border: #00f 1px solid;background-color: #00f;color: black;height: 260px;width: 20%;font-size: 20px;}
+.duoi{border: #0ff 1px solid;background-color: #0ff;color: black;height: 120px;width: 100%;margin: 2px;font-size: 20px;margin-top: 5px;}
+.cc{font-style: italic;}

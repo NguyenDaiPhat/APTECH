@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>bai3</title>
+</head>
+<body>
+<script>
+	document.write("1. Hình dạng 1:<br><br>")
+	for(i=1;i<=5;i++){
+		for(j=1; j<=i;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>2. Hình dạng 2:<br><br>")
+    for(i=5;i>=1;i--){
+		for(j=1; j<=i;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>3. Hình dạng 3:<br><br>")
+    for(i=1;i<=5;i++){
+    	for(k=5-i;k>=1;k--)document.writeln("&nbsp; &nbsp;")
+		for(j=1; j<=i;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>4. Hình dạng 4:<br><br>")
+    for(i=0;i<=4;i++){
+    	for(j=1; j<=i;j++)document.writeln("&nbsp;")
+    	for(k=i+1;k>=1;k--)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>5. Hình dạng 5:<br><br>")
+    for(i=1;i<=5;i++){
+    	for(k=5-i;k>=1;k--)document.writeln("&nbsp; ")
+		for(j=1; j<=2*i-1;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>6. Hình dạng 6:<br><br>")
+    for(i=5;i>=1;i--){
+    	for(k=5-i;k>=1;k--)document.writeln("&nbsp; ")
+		for(j=1; j<=2*i-1;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>7. Hình dạng 7:<br><br>")
+    for(i=4;i>=1;i--){
+    	for(k=5-i;k>=1;k--)document.writeln("&nbsp; ")
+		for(j=1; j<=2*i-1;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    for(i=1;i<=5;i++){
+    	for(k=5-i;k>=1;k--)document.writeln("&nbsp; ")
+		for(j=1; j<=2*i-1;j++)document.writeln("*")
+		document.write("<br>")
+    }
+    document.write("<br>8. Hình dạng 8:<br><br>")
+    for(i=1;i<=11;i++)document.writeln("*")
+    document.write("<br>")
+    for(i=1;i<=3;i++){document.write("*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*")
+    	document.write("<br>")}
+    for(i=1;i<=11;i++)document.writeln("*")
+    document.write("<br>")
+</script>
+</body>
+</html>

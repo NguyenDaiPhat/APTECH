@@ -1,0 +1,16 @@
+.header{width: 100%;}
+.header>div:first-child{border: #7fbf7f 1px solid;float: left;box-sizing: border-box;width: 27%;height: 100px;text-align: center;line-height: 100px;color: #539e4b;font-weight: bold;}
+.header>div:last-child{border: #7fbf7f 1px solid;float: left;box-sizing: border-box;width: 73%;height: 100px;
+text-align: center;line-height: 100px;color: #539e4b;font-weight: bold;}
+.mid{width: 100%;}
+.mid>div:first-child{border: #7fbf7f thin solid;float: left;box-sizing: border-box;width: 16%;font-weight: bold;color: #539e4b;text-align: center;background: #cff;height: 25px;}
+.mid>div:nth-child(2){border: #7fbf7f thin solid;float: left;box-sizing: border-box;width: 16%;font-weight: bold;color: #539e4b;text-align: center;background: #cff;height: 25px;}
+.mid>div:nth-child(3){border: #7fbf7f 1px solid;float: left;box-sizing: border-box;width: 16%;font-weight: bold;color: #539e4b;text-align: center;background: #cff;height: 25px;}
+.mid>div:nth-child(4){border: #7fbf7f 1px solid;float: left;box-sizing: border-box;width: 16%;font-weight: bold;color: #539e4b;text-align: center;background: #cff;height: 25px;}
+.mid>div:nth-child(5){border: #7fbf7f 1px solid;float: left;box-sizing: border-box;width: 16%;font-weight: bold;color: #539e4b;text-align: center;background: #cff;height: 25px;}
+.mid>div:nth-child(6){border: #7fbf7f 1px solid;float: left;box-sizing: border-box;width: 20%;font-weight: bold;color: #539e4b;text-align: center;background: #cff;height: 25px;}
+.bot{width: 100%;}
+.bot>div:first-child{float: left;box-sizing: border-box;width: 20%;border: #7fbf7f thin solid;text-align:center;color: #539e4b;font-weight: bold;height: 300px;line-height: 300px;}
+.bot>div:nth-child(2){float: left;box-sizing: border-box;width: 57%;border: #7fbf7f thin solid;text-align:center;height: 300px;font-size: 25px;}
+.bot>div:last-child{float: left;box-sizing: border-box;width: 23%;border: #7fbf7f thin solid;text-align:center;color: #539e4b;font-weight: bold;height: 300px;line-height: 300px;}
+.footer{width: 100%;box-sizing: border-box;border: #7fbf7f thin solid;text-align: center;color: #539e4b;font-weight: bold;float: left;height: 70px;line-height: 70px;}

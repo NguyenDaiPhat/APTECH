@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="background-color: darkblue;">
+<section>
+	<form style="border: 3px solid black; width: 800px; margin: auto; background-color: white;">
+		<h1 style="text-align: center;">Student management</h1>
+		<section style="margin-bottom: 5px">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Name: </label><input type="text" name="" required>
+		</section>
+		<section style="margin-bottom: 5px">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student DOB: </label><input type="date" name="">
+		</section>
+		<section style="margin-bottom: 5px">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studen Gender: </label><input type="radio" name="gender"> Male <input type="radio" name="gender" checked> Female
+		</section>
+		<section style="margin-bottom: 5px">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Language: </label><input type="checkbox" name="language" checked> English <input type="checkbox" name="language" checked> Vietnamese <input type="checkbox" name="language"> Japanese <input type="checkbox" name="language"> Chinese <input type="checkbox" name="language"> French
+		</section>
+		<section style="margin-bottom: 5px">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Class: </label>
+			<select>
+				<option>C1608G</option>
+			</select>
+			<a href="">Add Class</a>
+		</section>
+		<section>
+			<section style="width: 18.5%; float: left;">&nbsp;</section>
+			<input type="submit" value="Add">
+		</section>
+		<section>
+			<br><br><br>
+			<h1 style="text-align: center;">Student List</h1>
+			<br>
+			<table border="1" align="center" width="799px" cellspacing="0">
+				<tr>
+					<th>Name</th>
+					<th>Class</th>
+					<th>DOB</th>
+					<th>Gender</th>
+					<th>Language</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td> Nguyen Van A</td>
+					<td> C1610L</td>
+					<td> 20/10/1990</td>
+					<td> Male</td>
+					<td>Vietnamese, Chinese</td>
+					<td><a href=""> Delete</a></td>
+				</tr>
+				<tr>
+					<td> Tran Thi B</td>
+					<td> C1610I</td>
+					<td> 03/02/1991</td>
+					<td> Female</td>
+					<td>Vietnamese, English, Japanese</td>
+					<td><a href=""> Delete</a></td>
+				</tr>
+				<tr>
+					<td> Pham Thanh C</td>
+					<td> C1708I</td>
+					<td> 03/02/1991</td>
+					<td> Female</td>
+					<td>Vietnamese, English, Japanese</td>
+					<td><a href=""> Delete</a></td>
+				</tr>
+			</table>
+			<section style="width: 20%; padding-left: 86%;"><span style="font-weight: bold;">Total</span>: <u>3 students</u>
+			</section>
+		</section>
+	</form>
+</section>
+</body>
+</html>

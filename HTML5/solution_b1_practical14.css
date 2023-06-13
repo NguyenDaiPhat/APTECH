@@ -1,0 +1,9 @@
+h1{text-align: center;margin-bottom: 0;}
+hr{margin-bottom: 20px;}
+legend{font-style: italic;}
+label{font-weight: bold;float: left;width: 30%;}
+body>section{background-color: #0cf; margin: auto;width: 75%;}
+fieldset>section{margin-bottom: 5px;}
+textarea{width: 30%;}
+.magazine>section{padding-left: 15%;}
+.btn>section{boder:  grey 3px solid}

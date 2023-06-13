@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="jquery.min.1102.js"></script>
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+   	<form name="frm">
+   		<input type="text" name="data " autofocus>
+   		<input type="button" onclick="fCheck()">
+   	</form>
+</body>
+<script>
+	function fCheck(){
+		with(frm){
+			
+			if(/[abc]/.test(data.value)==true)alert("match")
+				else alert("not Match")
+		}
+		// alert("cc")
+
+    }
+    </script>
+</html>

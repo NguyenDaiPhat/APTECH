@@ -1,0 +1,15 @@
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.csproj.AssemblyReference.cache
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.GeneratedMSBuildEditorConfig.editorconfig
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.AssemblyInfoInputs.cache
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.AssemblyInfo.cs
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.csproj.CoreCompileInputs.cache
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\bin\Debug\net7.0\BaiTap18_2_bai2.exe
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\bin\Debug\net7.0\BaiTap18_2_bai2.deps.json
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\bin\Debug\net7.0\BaiTap18_2_bai2.runtimeconfig.json
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\bin\Debug\net7.0\BaiTap18_2_bai2.dll
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\bin\Debug\net7.0\BaiTap18_2_bai2.pdb
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.dll
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\refint\BaiTap18_2_bai2.dll
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.pdb
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\BaiTap18_2_bai2.genruntimeconfig.cache
+D:\APPTECH\CongNgheNet\BaiTap18_2_bai2\obj\Debug\net7.0\ref\BaiTap18_2_bai2.dll

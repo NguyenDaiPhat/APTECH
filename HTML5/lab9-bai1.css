@@ -1,0 +1,6 @@
+fieldset{width: 25%; height: 150px; padding: 0px}
+fieldset>div:nth-child(1){margin-top: 20px}
+fieldset>div:nth-child(2){margin-top: 50px}
+fieldset>div:nth-child(3){padding-left: 114px; margin-top: 80px}
+.cc1{float: left; width: 30%; text-align: center;}
+.cc2{float: left; width: 60%;}

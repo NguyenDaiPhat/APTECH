@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="jquery.min.1102.js"></script>
+</head>
+<body>
+<div>
+	<form name="frm">
+		<fieldset>
+		<div><label>Data: </label><input type="text" name="data"></div>
+		<div><input type="button" name="" value="Check" onclick="fCheck()"></div>
+		</fieldset>
+	</form>
+</div>
+<script> 
+	//let a = /x/; //~ 1 chuỗi bất kỳ trong đó có chứa x.
+	// test để so khớp kiểm tra trả về true false
+	function fCheck(){
+		with(frm){
+			let m1 = /x/ //1 chuỗi bất kì chứa x
+			if(m1.test(data.value) == true){
+				alert("Match")
+			}
+			else alert("Not Match")
+		}
+	}
+</script>
+</body>
+</html>

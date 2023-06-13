@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<div>
+	<form name="frm">
+		<div>
+			<label>Nhap so n: </label>
+			<input type="number" name="son">
+		</div>
+		<div>
+			<input type="submit" name="" onclick="tong()" value="kiem tra(0<n<100)">
+		</div>
+	</form>
+</div>
+<script>
+	function tong(){
+		if(frm.son.value<=0 || frm.son.value>=100)alert("Sai, nhập lại")
+		else alert("Đúng")
+	}
+</script>
+</body>
+</html>

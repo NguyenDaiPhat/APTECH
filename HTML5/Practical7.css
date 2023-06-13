@@ -1,0 +1,16 @@
+.infor{color: #f21319; margin-left: -8px; font-size: 20px; font-weight: bold;}
+.main1,.main2{width: 99%; margin-left: -10px;} 
+.main1{height: 90px;}
+.a{color: #ef302d; margin-left: -6px; font-weight: bold;}
+.độ{color: blue; font-weight: bold; margin-left: 127px;}
+.ngữ1{margin-left: 267.8px; margin-top: 3px;}
+.main2{margin-top: 5px; height: 150px;}
+.kỹ,.trình,.số{color: blue; font-weight: bold;} 
+.kỹ{margin-left: 204px;}
+.trình{margin-left: 199px; margin-top: 3px;}
+.số{margin-left: 90.5px; margin-top: 3px;}
+.save,.back,.next,.clear{color: #fc241b; font-weight: bold; background-color: #f5f5f1; border-color: #6b96b0;}
+.text{width: 80%; height: 45px; overflow-y: scroll; margin-left: 60px;}
+.back,.next,.clear{width: 5%; height: 30px; margin-top: 8px;}
+.next,.clear{margin-left: 20px;}
+.back{margin-left: 790px;}

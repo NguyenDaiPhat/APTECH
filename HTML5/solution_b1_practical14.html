@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="solution_b1_practical14.css">
+</head>
+<body>
+<section>
+	<h1>MAGAZINE BOOKING ONLINE</h1>
+	<hr width= "70%"  align= "center">
+<form name="frm" onsubmit="return fCheck()">
+	<fieldset>
+		<legend>Customer Information</legend>
+		<section>
+			<label>Customer name </label><input type="text" name="name" title="Please, enter your Name">
+		</section>
+		<section>
+			<label>Address</label><textarea name="address"></textarea>
+		</section>
+		<section>
+			<label>Email</label><input type="email" name="email">
+		</section>
+		<section>
+			<label>Telephone</label><input type="tel" name="telephone">
+		</section>
+		<section>
+			<label>Sex</label><input type="radio" name="sex" value="Mr" checked> Male <input type="radio" name="sex" value="Mrs"> Female
+		</section>
+		<section>
+			<fieldset>
+				<legend>Job</legend>
+				<section style="text-align: center;">
+				<input type="radio" name="job" value="Student"> Student <input type="radio" name="job" value="Engineer"> Engineer <input type="radio" name="job" value="Teacher"> Teacher <input type="radio" name="job" value="Doctor"> Doctor <input type="radio" name="job" value="Reader"> Other
+				</section>
+			</fieldset>
+		</section>
+	</fieldset>
+	<fieldset class="magazine" style="margin-top: 20px">
+		<legend style="font-style: normal;">Magazines</legend>
+		<section>
+		<input type="checkbox" name="magazine" value="BUSSINESS"> BUSINESS <input type="checkbox" name="magazine" value="FOOTBALL" style="margin-left:13%"> FOOTBALL </section><section><input type="checkbox" name="magazine" value="FASHION"> FASHION <input type="checkbox" name="magazine" value="ECONOMICS" style="margin-left: 14.6%"> ECONOMICS</section>
+	</fieldset>
+	<section style="text-align:center;padding: 20px 0 5px;">
+		<table border="1" width="30%" align="center" cellpadding="3">
+			<tbody>
+				<tr>
+					<td><input type="submit" value="Booking"></td>
+					<td><input type="reset" value="Reset"></td>
+				</tr>
+			</tbody>
+	</section>
+</form>
+</section>
+
+<script src="solution_b1_practical14.js"></script>
+</body>
+</html>

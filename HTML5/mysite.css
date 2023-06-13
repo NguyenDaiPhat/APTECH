@@ -1,0 +1,5 @@
+body{background-color: darkblue;}
+form{border:solid 3px black; background-color: white; margin: auto;width: 20%;height: 200px;}
+h2{text-align: center;}
+form>section:nth-child(2),form>section:nth-child(1){margin-bottom: 3px;}
+.vv{width: 24.5%; float: left;margin-top:2px; padding-left: 29.5%}

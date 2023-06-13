@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<form oninput="op.value=parseFloat(n1.value)+parseFloat(n2.value)">
+	<div>
+		<label>Subject: </label>
+		<input type="text" name="" list="sub">
+		<datalist id="sub">
+			<option>HTML5</option>
+			<option>CSS3</option>
+			<option>jquery</option>
+		</datalist>
+	</div>
+	<div>
+		<label>Progress: </label>
+		<progress value="30" max="100">
+	</div>
+	<div>
+		<label>Number1: </label>
+		<input type="date" name="n1" step="1" min="2" max="10">
+	</div>
+	<div style="margin-top: 5px">
+		<label>Number2: </label>
+		<input type="number" name="n2">
+	</div>
+    <div>
+    	<label>Output: </label>
+		<output name="op"></output>
+	</div>
+	<div>
+		<input type="submit" name="" value="Gửi">
+	</div>
+	<div>
+		<label>range: </label>
+		<input type="range" name="" oninput="show.value=this.value" step="2">
+		<output name="show"></output>
+	</div>
+</form>
+</body>
+</html>

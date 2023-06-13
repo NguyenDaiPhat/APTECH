@@ -1,0 +1,26 @@
+fieldset:first-child{height: 268px;}
+fieldset>fieldset{margin-left: -12px;margin-top: 25px;width: 99.5%;height: 50px;}
+legend{font-style: italic;margin-left: -7px;}
+label{float: left;font-weight: bold;width: 225px;margin-left: -9px;padding-top: 15px;}
+input{margin-top: 15px;}
+.input{margin-top: auto;}
+.input1{margin-top: 4px;}
+.input2{margin-left: 120px;}
+.input3{margin-left: 128px;}
+.border{border: #36aecc thin solid;background: #00ccff;height: 585px;width: 590px;margin-left: 5px;}
+body{border: #bfbfbf thin solid;width: 605px;margin-left: 26%;}
+hr{color: #87a4ab;width: 83%;margin-bottom: 56px;}
+span{}
+textarea{width: 200px;margin-top: 4px;height: 40px;}
+.div1{margin-top: auto;}
+.div3{margin-top: 12px;margin-left: -110px;}
+.div4,.div5{margin-left: 63px;}
+.div5{margin-top: -8px;}
+.fieldset{margin-left: -14px;height: 65px;width: 100.3%;}
+.div6{margin-top: 19px;margin-left: 128px;width: 320px;}
+.div7{margin-top: -37px;margin-left: 275px ;width:176px ;}
+.div8{width: 34%;margin-left: 129px;}
+.div9{width: 20%;margin-left: -2px;}
+.div6,.div7{border: #808080 thin solid}
+.div8,.div9{border: 2px outset;float: left;box-sizing: border-box;margin-top: 14px;}
+span{border:  thin inset;float: left;width: 100%}

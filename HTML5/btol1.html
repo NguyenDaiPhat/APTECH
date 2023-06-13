@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<strong>Nội dung mẫu</strong></li><br>
+Một <strong>ứng dụng doanh nghiệp đa tầng</strong> bao gồm hai loại đối tượng: <strong>các thành phần logic ứng dụng </strong>và <strong>các đối tượng dữ liệu bền vững. </strong>Các thành phần logic ứng dụng thể hiện các hành động và xác định các phương pháp thực hiện nhiệm vụ chung như tính giá đơn hàng, thanh toán thẻ tín dụng của khách hàng, và vân vân. Sesion beans tạo mô hình cho các thành phần logic ứng dụng bởi chúng chứa logic để thực hiện các nhiệm vụ ứng dụng.<br>
+Nó rất dễ dàng và đơn giản để quản lý dữ liệu kinh doanh có trong các tổ chức lớn như là các đối tượng chứ không phải là các hàng quan hệ trong cơ sở dữ liệu. Dữ liệu kinh doanh khi được coi như là các đối tượng sẽ dễ dàng xử lý và quản lý bởi về bản chất chúng rất nhỏ gọn.<br>
+Thực tế không liên quan chỉ với các EJB và có thể sử dụng trong môi trường <strong>Java 2 Standard Edition (J2SE). </strong>Sự khác nhau giữa Thực thể và Phiên bean như sau:
+<ul>
+	<li>Các thực thể có khả năng làm khách hàng thấy và một nhận dạng bền vững khác biệt với tham chiếu đối tượng của chúng. Mỗi thực thể khác biệt với nhau vì nhận dạng của chúng. Khách hàng có thể sử dụng nhận dạng để chuyển các phần tham khảo của một thực thể cho các ứng dụng khác. Tuy nhiên không thể như vậy sới Session beans</li>
+	<li>Enity bean không thể được truy cập từ xa, trong khi Session beans có thể được truy cập cục bộ cũng như từ xa.s</li>
+    <li>Tuổi thọ của thực thể không phụ thuộc vào tuổi thọ của ứng dụng. Enity bean có tuổi thọ dài hơn nhiều so với phiên làm việc của khách hàng vì nó phụ thuộc vào thời gian các dữ liệu có trong cơ sở dữ liệu.</li>
+    <li>Các thực thể đại diện cho dữ liệu trong lưu trứ mà là vĩnh viễn cũng như chịu dược lỗi và do đó, chúng tồn tại lâu dài và có thể tồn tại khi có sự cố về cơ sơe dữ liệu hoặc máy chủ ứng dụng. Dữ liệu này có thể được cấu trúc lại trong bộ nhớ. Do đó, có thể nói rằng thực thể là một sự trình bày trong bộ nhớ về dữ liệu lâu dài mà:</li>
+        <ul style="list-style-type: square;">
+        	<li>Có thể được tải từ lưu giữ lâu dài và trường của nó được tập kết với các dữ liệu đã lưu trữ</li>
+        	<li>Có thể được sửa đổi trong bộ nhớ để thay đổi các giá trị dữ liệu</li>
+        	<li>Có thể được lưu lại và cơ sở dữ liệu tương ứng được cập nhật</li>
+        </ul>
+</ul>
+</body>
+</html>

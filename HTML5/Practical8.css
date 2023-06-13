@@ -1,0 +1,23 @@
+.div1,.div2{margin-left: 330px;}
+.div1{margin-top: 40px;}
+.div2{margin-top: 6px;}
+.div3{float: left;width: 47%;color: #0000ff;font-style: 17px;font-weight: bold;margin-top: 10px;margin-left: 287px;}
+fieldset{border: #0101fe 2px solid;height: 505px;background: #bbffff;}
+fieldset>legend:nth-child(2){color: #0000ff;margin-left: -11px;margin-top:  24px;}
+legend{color: #ff0000;font-size:17px;font-weight: bold;background: #bbffff;}
+.red{color: red;}
+label{float: left;width: 237px;color: #0000ff;font-style: 17px;font-weight: bold;}
+.blue{color: #0000ff;font-style: italic;margin-left: 569px;margin-top: 7px;}
+body{margin: 0;border: black thin solid;height: 570px;}
+.styleinput{color: #ff0000;width: 160px;height: 30px;margin-top: 8px;font-size: 21px;font-weight: bold;}
+.styleinput2{color: #ff0000;width: 250px;height: 25px;margin-top: 11.4px;font-size: 18px;font-weight: bold;margin-left: -68px;}
+.right{margin-left: 98px;}
+.right2{margin-left: 110px;}
+.right3{margin-left: 109px;}
+.right4{margin-left: 81px;}
+.right5{margin-left: 189px;}
+.right6{margin-left: 195px;}
+.right7{margin-left: 148.1px;}
+.right8{margin-left: 154px;}
+.right9{margin-left: 155px;}
+.right10{margin-left: 141.1px;}

@@ -1,0 +1,9 @@
+fieldset{border: 2px solid #00009f;}
+legend{color: red;}
+.note{font-style: italic; color: blue;}
+.note span{text-decoration: underline;}
+label{float: left;width: 30%;text-align: right;margin-right: 0.2%;color: blue; font-weight: bold;}
+fieldset>div{margin-top: 5px;}
+.note1{font-style: italic;color: blue;font-size: 14px;}
+.note2{color: red;}
+input{width: 40%;}

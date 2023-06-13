@@ -1,0 +1,15 @@
+D:\APPTECH\CongNgheNet\BaiTap11_9\bin\Debug\net7.0\BaiTap11_9.exe
+D:\APPTECH\CongNgheNet\BaiTap11_9\bin\Debug\net7.0\BaiTap11_9.deps.json
+D:\APPTECH\CongNgheNet\BaiTap11_9\bin\Debug\net7.0\BaiTap11_9.runtimeconfig.json
+D:\APPTECH\CongNgheNet\BaiTap11_9\bin\Debug\net7.0\BaiTap11_9.dll
+D:\APPTECH\CongNgheNet\BaiTap11_9\bin\Debug\net7.0\BaiTap11_9.pdb
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.csproj.AssemblyReference.cache
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.GeneratedMSBuildEditorConfig.editorconfig
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.AssemblyInfoInputs.cache
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.AssemblyInfo.cs
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.csproj.CoreCompileInputs.cache
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.dll
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\refint\BaiTap11_9.dll
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.pdb
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\BaiTap11_9.genruntimeconfig.cache
+D:\APPTECH\CongNgheNet\BaiTap11_9\obj\Debug\net7.0\ref\BaiTap11_9.dll

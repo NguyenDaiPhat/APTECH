@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="jquery.min.1102.js"></script>
+</head>
+<body>
+<button id="b1">Click => Hide</button>
+<button id="b2">Click => Show</button>
+<button id="b3">Click => Toggle</button>
+<hr>
+<div>
+	<p>v1study.com</p>
+	<p>demo.v1study.com</p>
+</div>
+<div>
+	<p>phat</p>
+	<p>dz</p>
+</div>
+<script> 
+		$('#b1').click(function(){
+			$('body>div:nth-child(5)').hide(2000)
+		})
+		$('#b2').click(function(){
+			$('div').show(2000)
+		})
+		$('#b3').click(function(){
+			$('div').toggle(2000)
+		})
+	
+</script>
+</body>
+</html>

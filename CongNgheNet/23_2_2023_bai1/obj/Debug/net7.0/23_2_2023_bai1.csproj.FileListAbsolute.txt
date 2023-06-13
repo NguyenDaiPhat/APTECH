@@ -1,0 +1,15 @@
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\bin\Debug\net7.0\23_2_2023_bai1.exe
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\bin\Debug\net7.0\23_2_2023_bai1.deps.json
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\bin\Debug\net7.0\23_2_2023_bai1.runtimeconfig.json
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\bin\Debug\net7.0\23_2_2023_bai1.dll
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\bin\Debug\net7.0\23_2_2023_bai1.pdb
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.csproj.AssemblyReference.cache
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.GeneratedMSBuildEditorConfig.editorconfig
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.AssemblyInfoInputs.cache
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.AssemblyInfo.cs
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.csproj.CoreCompileInputs.cache
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.dll
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\refint\23_2_2023_bai1.dll
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.pdb
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\23_2_2023_bai1.genruntimeconfig.cache
+D:\APPTECH\CongNgheNet\23_2_2023_bai1\obj\Debug\net7.0\ref\23_2_2023_bai1.dll

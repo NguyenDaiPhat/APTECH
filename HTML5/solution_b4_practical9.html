@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		label{font-weight: bold;}
+		form>section:first-child,form>section:nth-child(2){margin-bottom: 20px;}
+		input[name="boxC"]{margin-left: 35px;width: 12%;}
+	</style>
+</head>
+<body>
+<section style="text-align: center;">
+	<h1>COMPARE THE NUMBERS OF THE CHARACTERS</h1>
+	<h2 style="margin-bottom: 60px;">In the two follơing Text Boxes, which has more characters ?</h2>
+	<form name="frm">
+		<section>
+			<label>Box A</label> <input type="text" name="boxA">
+		</section>
+		<section>
+			<label>Box B</label> <input type="text" name="boxB">
+		</section>
+		<section><input onclick="fCheck();" type="button" value="THE BOX HAS MORE IS: "><input type="text" name="boxC" readonly></section>
+		<section><input type="radio" name="cc1">Box A<input type="radio" name="cc1"> Box B<input type="radio" name="cc1">Box A = Box B</section>
+	</form>
+</section>
+
+<script>
+	function fCheck(){
+		with(frm){
+			var re1 = /^\s*$/;
+			if(re1.test(boxA.value)){
+				alert("Cần điền thông tin vào box A!")
+				boxA.value=""
+				boxA.focus()
+				return false
+			}
+			if(re1.test(boxB.value)){
+				alert("Cần điền thông tin vào box B!")
+				boxB.value=""
+				boxB.focus()
+				return false
+			}
+			if(boxA.value.length > boxB.value.length){
+				boxC.value="Box A"
+				cc1[0].checked=true
+			}
+			else if(boxA.value.length == boxB.value.length){
+				boxC.value= 'Box A = Box B'
+				cc1[2].checked=true
+			}
+			else {boxC.value= 'Box B'
+				cc1[1].checked=true}
+		}
+	}
+</script>
+</body>
+</html>

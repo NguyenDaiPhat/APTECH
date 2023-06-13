@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		#year{display: none;}
+	</style>
+</head>
+<body>
+<section>
+	<form name="frm">
+		<section>
+			<label>Input month: </label><input type="number" name="month" min="1" max="12" oninput="if(this.value=='2'){document.getElementById('year').style.display='block';} else {document.getElementById('year').style.display='none'}">
+		</section>
+		<section id="year">
+			<label>Input year: </label><input type="number" name="year">
+		</section>
+		<section>
+			<input type="submit" value="Check" onclick="return fCheck()">
+		</section>  
+	</form>
+</section>
+
+<script>
+	function fCheck(){
+		with(frm){
+			let re1= /^\s*$/
+			let m = month.value
+			if(re1.test(month.value)){
+				alert("Cần điền 1 tháng")
+				month.focus()
+				return false
+			}
+			switch(parseInt(m)){
+				case 2: 
+				  let y= year.value
+				  if((y%4==0 && y%100!=0) || (y%400==0)){
+				  	alert("Tháng "+ m + " năm " + Math.abs(y)+ (y<0?" trước công nguyên":"") + " có 29 ngày")
+				  }
+				  else{
+				  	alert("Tháng "+ m + " năm " +Math.abs(y)+ (y<0?" trước công nguyên":"") + " có 28 ngày")
+				  }
+				  break;
+				case 4:case 6: case 9: case 11:
+				  alert("Tháng "+ m+ " có 30 ngày")
+				  break;
+				default: 
+				  alert("Tháng "+ m+ " có 31 ngày")
+			}
+		}
+	}
+</script>
+</body>
+</html>
