@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="exampleviewApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example View AngularJS</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+</head>
+<body ng-controller="mainController">  
+    <h2>Hello {{name}}</h2>
+    <input type="text" ng-model="name" />
+    <p>
+        <strong>Example expression</strong>
+        <br/>
+        Bieu thuc so hoc {{2+2}}
+        <br/>
+        Bieu thuc quan he {{1==2}}
+        <br/>
+        Hang so {{5}}
+        <br/>
+        Du lieu trong controller {{name}}
+        <br/>
+        Du lieu trong controller {{arr[0]}}
+        <br/>
+        Su dung ng-bind directive de dua du lieu ra html <strong ng-bind="name"></strong>
+        <br/>
+        Su dung ng-bind directive de dua du lieu ra html <strong ng-bind="5+6"></strong>
+        <br/>
+        Su dung ng-bind directive de dua du lieu ra html <strong ng-bind="1==2"></strong>
+    </p>
+</body>
+<script>
+    var exampleviewApp = angular.module('exampleviewApp', []);
+    exampleviewApp.controller('mainController', function($scope) {
+        $scope.name = 'test';
+        $scope.arr = [2,3,4];
+    });
+</script>
+</html>

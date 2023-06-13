@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- bài này khó quá e ko biết làm -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>25_04bvn</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app= 'phatApp' ng-controller = 'phatConTroller'>
+<div style=" float: left;width: 100%;"><img src="ah\anh1.jpg"></div>
+<div style="float: left; width: 3%;">&nbsp</div>
+<div style="float: left;">
+	<div ng-hide= 'step1'><button type="button"  ng-click='click()' style="background: #007aff; color: #d7fbff; width: 350px;height: 35px;text-align: center;">Follow</button></div>
+	<!-- <div ng-hide= 'step2'><button  style="background: red; color: #d7fbff; width: 350px;height: 35px;text-align: center;">Followed</button></div> -->
+</div>
+<div style=" float: left;width: 100%;"><img src="ah\anh2.jpg" style="width: 430px;"></div>
+</body>
+
+<script>
+	var app =angular.module('phatApp', [])
+	app.controller('phatConTroller', ($scope) =>{
+		$scope.step1 = false
+		$scope.step2 = true
+		$scope.click(){
+			$scope.step1 = true
+		$scope.step2 = false
+		} 
+	})
+</script>
+</html>

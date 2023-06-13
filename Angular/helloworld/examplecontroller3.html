@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example controller</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="">
+        <div ng-controller="mainController">
+            <h1>Thông tin nhân sự</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Tuổi</th>
+                        <th>Địa chỉ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.age}}</td>
+                        <td>{{employee.website}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    function mainController($scope) {
+        $scope.employee = {
+            name: 'Toanngo92',
+            age: 20,
+            website: 'https://web888.vn'
+        };
+    }
+</script>
+</html>

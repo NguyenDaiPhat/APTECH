@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2204bai2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="surveyApp">
+    <div ng-controller="mainController">
+        <form name="surveyForm" ng-submit="handleSubmit()">
+            <div ng-hide="step1">
+            	<h1>INFORMATION</h1>
+                <div>
+                    <label>Name: </label>
+                    <input type="text" ng-model="user.name" required />
+                </div>
+                <div>
+                    <label>Adress: </label>
+                    <input type="text" ng-model="user.address" required>
+                </div>
+                <div>
+                    <label>Phonenumber: </label>
+                    <input type="number" ng-model = "user.phonenumber">
+                </div>
+                <button type="button"  ng-click="nextstep($event)">Next step</button>
+            </div>
+            <div ng-hide="step2">
+            	<h1>Favorite</h1>
+                <div>
+                    <label>Music: </label>
+                    <input type="text" ng-model="interest.music" required />
+                </div>
+                <div>
+                    <label>Movies: </label>
+                    <input type="text" ng-model="interest.movies" required />
+                </div>
+                <div>
+                    <label>Books: </label>
+                    <input type="text" ng-model="interest.books" required />
+                </div>
+                <div>
+                    <label>Games: </label>
+                    <input type="text" ng-model="interest.games" required />
+                </div>
+                <button type="button"  ng-click="prevstep($event)">Pre step</button>
+                <button>submit</button>
+            </div>
+            <div ng-hide="step3">
+                <br />
+                Your name: {{user.name}}
+                <br />
+                Your address: {{user.address}}
+                <br />
+                Your phonenumber: {{user.phonenumber}}
+                <br />
+                Your favorite music: {{interest.music}}
+                <br />
+                Your favorite movies: {{interest.movies}}
+                <br />
+                Your favorite books: {{interest.books}}
+                <br />
+                Your favorite games: {{interest.games}}
+                <br />
+            </div>
+            </div>
+        </form>
+</body>
+<script>
+    var surveyApp = angular.module('surveyApp', []);
+    surveyApp.controller('mainController', ($scope) => {
+        $scope.step1 = false;
+        $scope.step2 = true;
+        $scope.step3 = true;
+        $scope.user = {
+            name: '',
+            address: '',
+            phonenumber: ''
+        }
+        $scope.interest = {
+            music: '',
+            movies: '',
+            books: '',
+            games: '',
+        }
+        $scope.prevstep = ($event) => {
+            switch ($event) {
+                default:
+                case '2':
+                    $scope.step2 = true;
+                    $scope.step1 = false;
+                    break;
+            }   
+        }
+
+        $scope.nextstep = ($event) => {
+            switch ($event) {
+                default:
+                case '1':
+                    $scope.step1 = true;
+                    $scope.step2 = false;
+                    break;
+                case '2':
+                    $scope.step2 = true;
+                    $scope.step3 = false;
+                    break;
+            }
+        }
+
+        $scope.handleSubmit = () => {
+            $scope.step2 = true;
+            $scope.step3 = false;
+            // console.log($scope.user);
+            // console.log($scope.interest);
+        }
+    });
+</script>
+</html>

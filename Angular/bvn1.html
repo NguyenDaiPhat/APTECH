@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>bvn</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app = 'myApp'>
+	<!-- <div ng-controller = 'myConTroller' >
+		<input type="text" ng-model= 'cc'> 
+
+	</div> -->
+	<div ng-controller = 'myConTroller'>
+		{{sinhvien.name}}
+		{{sinhvien.age}}
+		{{sinhvien.mark}}
+	</div>
+</body>
+<script>
+	var app = angular.module('myApp',[])
+	app.controller('myConTroller', ($scope) =>{
+		$scope.sinhvien = {
+			name: 'phat',
+			age : 19,
+			mark : 10
+		}
+	})
+</script>
+</html>

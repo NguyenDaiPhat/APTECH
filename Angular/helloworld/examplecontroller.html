@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Controller</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="examController">
+        <div ng-controller="headerController">
+            {{name}} - {{data}}
+        </div>
+        <div ng-controller="mainController">
+            {{name}} - {{data}}
+        </div>
+        <div ng-controller="footerController">
+            {{name}} - {{data}}
+        </div>
+    </div>
+    <script>
+        var app = angular.module('examController', []);
+        app.controller('headerController', function($scope){
+            $scope.name = "This is header";
+        });
+        app.controller('mainController', function($scope){
+            $scope.name = "This is main";
+            $scope.data = "main data";
+        });
+        app.controller('footerController', function($scope){
+            $scope.name = "This is footer";
+        });
+    </script>
+</body>
+</html>

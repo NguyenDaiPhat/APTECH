@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example ngform</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="mycontroller">
+        <form ng-submit="submit()">
+            <input ng-model="myForm.name" type="text" name="name" placeholder="Name">
+            <input ng-model="myForm.email" type="email" name="email" placeholder="Email">
+            <input ng-model="myForm.password" type="text" name="password" placeholder="password">
+            <input ng-model="myForm.confirmPassword" type="text" name="confirmpassword" placeholder="confirmpassword">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('mycontroller', function($scope) {
+        $scope.myForm = {};
+        $scope.myForm.name = "sdfsdf";
+        $scope.myForm.email = "";
+        $scope.myForm.password = "";
+        $scope.myForm.confirmPassword = "";
+        $scope.submit = function() {
+            console.log($scope.myForm);
+            // send ajax to server or database
+            // in this case, we just save data to localstorage
+            localStorage.setItem('listuser', JSON.stringify($scope.myForm));
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body style="background-color: darkblue;" ng-app="myApp" ng-controller="myCtrl">
+	<form name="frm">
+		<div style="width: 800px; border: double; margin: auto; background-color: white; height: 600px">
+			<h2 style="text-align: center; font-weight: bold;">Student management</h2>
+			<div style="margin-top: 5px;">
+				<label style="float: left; text-align: right; width: 30%; ">Student Name: </label>
+				<input type="text" required ng-model="name"><span ng-show="frm.name1.$valid">True</span>
+			</div style="margin-top: 5px;">
+			<div style="margin-top: 5px;">
+				<label style="float: left; text-align: right; width: 30%; ">Student DOB: </label>
+				<input type="date" ng-model="dob">
+			</div>
+			<div style="margin-top: 5px;">
+				<label style="float: left; text-align: right; width: 30%;">Student Gender: </label>
+				<input type="radio" name="gen" ng-model="gender" value="Male">Male
+				<input type="radio" name="gen" ng-model="gender" value="Female">Female
+			</div>
+			<div style="margin-top: 5px;">
+				<label style="float: left; text-align: right; width: 30%; ">Student Language: </label>
+				<input type="checkbox" ng-model="eng">English
+				<input type="checkbox" ng-model="viet">Vietnamese
+				<input type="checkbox" ng-model="jp">Japanese
+				<input type="checkbox" ng-model="chi">Chinese
+				<input type="checkbox" ng-model="fre">French
+			</div>
+			<div style="margin-top: 5px;">
+				<label style="float: left; text-align: right; width: 30%;" >Student class:</label>
+			<select ng-model="class">
+				<option ng-repeat="a in classes">{{a}}</option>
+			</select>
+			<span style="color: blue; text-decoration: underline; cursor: pointer;" ng-click="addClass()">Add class</span>
+			</div">	
+			<section>
+				<input type="submit" value="Add" style="margin-left: 240px; margin-top: 5px" ng-click="addStudent()" ng-show="showBut">
+				<input type="button" value="Save" ng-hide="showBut" ng-click="saveStudent()" style="margin-left: 240px; margin-top: 5px">
+			</section>
+		</div>
+	</form>
+	<form>
+		<h2 style="text-align: center; font-weight: bold;">Student list</h2>
+		<table border="1" width="90%" align="center" cellspacing="0">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Class</th>
+					<th>DOB</th>
+					<th>Gender</th>
+					<th>Language</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="stu in student" ng-click="editStudent($index)" style="cursor: pointer;">
+					<td>{{stu.name}}</td>
+					<td>{{stu.class}}</td>
+					<td>{{stu.dob | date: 'longDate'}}</td>
+					<td>{{stu.gender}}</td>
+					<td>{{stu.language}}</td>
+					<td style="color: blue; text-decoration: underline; cursor: pointer;" ng-click="delStudent($index)">Delete</td>
+				</tr>
+			</tbody>
+		</table>
+		<div >
+			<span style="font-weight: bold; margin-left: 652px">Total: </span>
+			<span style="text-decoration: underline;">3 students</span>
+		</div>
+	<script>
+		let app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope){
+			$scope.student = [
+				{name: "Nguyen Van A", class: "C1610L", dob: "20/10/1990", gender: "Male", language: "Vietnamese, Chinese"},
+				{name: "Tran Thi B", class: "C1608L", dob: "03/02/1991", gender: "Female", language: "Vietnamese, English, Japanese"},
+				{name: "Pham Thanh C", class: "C1708L", dob: "03/02/1991", gender: "Female", language: "Vietnamese, English, Japanese"}
+			];
+			$scope.classes = ["C1608G", "C1610L", "C1608L", "C1708L"];
+			$scope.delStudent = function(id){
+				if(confirm("Are you sure to delete?")){
+					$scope.student.splice(id, 1);
+					alert("Data deleted successfully!")
+				}
+			}
+			$scope.addClass = function(){
+				let p = null;
+				p = prompt('Input new class name: ');
+				if(p != null && p != ""){
+					$scope.classes.push(p);
+					alert('The class added succesfully');
+					p = null;
+				}
+			}
+			$scope.showBut = true;
+			$scope.editStudent = function(id){
+				$scope.showBut = false;
+				$scope.name = $scope.student[id].name;
+			}
+			$scope.saveStudent = function(){
+				$scope.showBut = true;
+				$scope.name = $scope.student[id].name;
+			}
+			$scope.addStudent = function(){
+				$scope.student.push({name: $scope.name, class: $scope.class, dob: $scope.dob, gender: $scope.gender,});
+			}
+		});
+		
+	</script>
+</body>
+</html>

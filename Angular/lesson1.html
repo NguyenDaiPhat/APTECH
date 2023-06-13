@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lesson1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="">
+	<p>Name:</p>
+	<input type="text" ng-model="name" ng-init="name='cc'">
+	<p ng-bind="cc"></p>
+	{{1+2}}
+	{{cc}}
+	<input type="number" ng-model="num"> <input type="text" ng_model="color">
+	<p style="font-size:{{num + 'px'}};color:{{color}};">content</p>
+	
+	<!-- doi tuong -->
+
+	<div ng-app="" ng-init="person={name:'phat',city:'namdinh'};arr=[1,2,3,4]">
+		{{arr[3]}}
+		{{'name: ' + person.name+",city: "+person.city}}
+	</div>
+
+	<!-- ng_repeat -->
+
+	<div ng-init="namee=['1','hi','bar']">
+	<ul>
+		<li ng-repeat="x in namee">{{x}}</li>
+	</ul>
+	</div>
+</div>
+</body>
+</html>

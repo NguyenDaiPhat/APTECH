@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example ng-include</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myController">
+            <h1>ng-include example</h1>
+            <div ng-include="'table.html'" onload="items = items"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller('myController', function($scope) {
+        $scope.items = [
+            {name: 'Jani', country: 'Norway'},
+            {name: 'Hege', country: 'Sweden'},
+            {name: 'Kai', country: 'Denmark'}
+        ]
+    });
+</script>
+</html>

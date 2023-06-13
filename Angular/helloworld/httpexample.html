@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exmample Http method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="listUserController">
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <tr ng-repeat="user in users">
+                    <td>{{user.fields.username}}</td>
+                    <td>{{user.fields.fullname}}</td>
+                    <td>{{user.fields.phonenumber}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    var app = angular.module('myApp', []);
+    // app.run(function($http) {
+    // $http.defaults.headers.common['Authorization'] = 'Basic keyMhcG4dscdHl3Nf';
+    // });
+    app.controller('listUserController', function ($scope, $http) {
+        $scope.listUser = [];
+        $scope.getListUser = $http({
+            url: "https://api.airtable.com/v0/apppcdfKQ5q5rch7A/user",
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer keyMhcG4dscdHl3Nf'
+            }
+        }).then(
+            function (data) {
+                $scope.users = data.data.records;
+                console.log($scope.users);
+            }, 
+            function (error) {
+                console.log(error);
+                alert("get list Failed");
+            });
+      //  $scope.getListUser();
+    });
+</script>
+
+</html>

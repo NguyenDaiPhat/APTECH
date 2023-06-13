@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example ng-repeat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="mainController"> 
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in names">
+                    <td>{{item.name}}</td>
+                    <td>{{item.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li ng-repeat="item in listnotes">{{item.id}} - {{item.title}} - {{item.content}}</li> 
+        </ul>
+    </div>
+</body>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller('mainController', function ($scope) {
+        $scope.names = [
+            { name: 'Jani', country: 'Norway' },
+            { name: 'Hege', country: 'Sweden' },
+            { name: 'Kai', country: 'Denmark' }
+        ];
+        $scope.listnotes = [
+            {'id': 1, 'title': 'Note 1', 'content': 'Content 1'},
+            {'id': 2, 'title': 'Note 2', 'content': 'Content 2'},
+            {'id': 3, 'title': 'Note 3', 'content': 'Content 3'}
+        ]
+    });
+</script>
+</html>

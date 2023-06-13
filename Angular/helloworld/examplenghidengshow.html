@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng-hide/ng-show example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="surveyApp">
+    <div ng-controller="mainController">
+        <h1>Survey Form</h1>
+        <form name="surveyForm" ng-submit="handleSubmit()">
+            <div ng-hide="step1">
+                <div>
+                    <label>What is your name ?</label>
+                    <input type="text" ng-model="user.name" required />
+                </div>
+                <div>
+                    <label>How old are you ?</label>
+                    <input type="number" placeholder="" ng-model="user.age" required />
+                </div>
+                <div>
+                    <label>Do you get married ?</label>
+                    <input type="radio" ng-model="user.married" value="yes" />Yes
+                    <input type="radio" ng-model="user.married" value="no" />No
+                </div>
+                <div>
+                    <label>What kind of job are you doing ?</label>
+                    <select ng-model="user.job">
+                        <option value="developer">Developer</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="businessconsult">Business Consultant</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="button" data-step="1" ng-click="nextstep($event)">Next step</button>
+            </div>
+            <div ng-hide="step2">
+                <div>
+                    <label>What is your favorite sports ?</label>
+                    <input type="text" ng-model="interest.sports" required />
+                </div>
+                <div>
+                    <label>What is your favorite music ?</label>
+                    <input type="text" ng-model="interest.music" required />
+                </div>
+                <div>
+                    <label>What is your favorite movies ?</label>
+                    <input type="text" ng-model="interest.movies" required />
+                </div>
+                <div>
+                    <label>What is your favorite books ?</label>
+                    <input type="text" ng-model="interest.books" required />
+                </div>
+                <div>
+                    <label>What is your favorite games ?</label>
+                    <input type="text" ng-model="interest.games" required />
+                </div>
+                <button type="button" data-step="2" ng-click="prevstep($event)">Previous step</button>
+                <button type="button" data-step="2" ng-click="nextstep($event)">Next step</button>
+            </div>
+            <div ng-hide="step3">
+                <div>
+                    <label>Please provide your salary ?</label>
+                    <input type="text" ng-model="finances.salary" required />
+                </div>
+                <div>
+                    <label>Please provide your savings ?</label>
+                    <input type="text" ng-model="finances.savings" required />
+                </div>
+                <div>
+                    <label>Please provide your investments ?</label>
+                    <input type="text" ng-model="finances.investments" required />
+                </div>
+                <div>
+                    <label>Please provide your debt ?</label>
+                    <input type="text" ng-model="finances.debt" required />
+                </div>
+                <button type="button" data-step="3" ng-click="prevstep($event)">Previous step</button>
+                <button>submit form</button>
+            </div>
+            <div ng-hide="step4">
+                Thanks for your submission
+                Let us show what you provide:
+                <br />
+                Your name: {{user.name}}
+                <br />
+                Your age: {{user.age}}
+                <br />
+                Your job: {{user.job}}
+                <br />
+                Your favorite sports: {{interest.sports}}
+                <br />
+                Your favorite music: {{interest.music}}
+                <br />
+                Your favorite movies: {{interest.movies}}
+                <br />
+                Your favorite books: {{interest.books}}
+                <br />
+                Your favorite games: {{interest.games}}
+                <br />
+                Your salary: {{finances.salary}}
+                <br />
+                Your savings: {{finances.savings}}
+                <br />
+                Your investments: {{finances.investments}}
+                <br />
+                Your debt: {{finances.debt}}
+                <br />
+                Thanks for contact us !
+            </div>
+        </form>
+</body>
+<script>
+    var surveyApp = angular.module('surveyApp', []);
+    surveyApp.controller('mainController', ($scope) => {
+        $scope.step1 = false;
+        $scope.step2 = true;
+        $scope.step3 = true;
+        $scope.step4 = true;
+        $scope.user = {
+            name: 'sdfsdf',
+            age: '',
+            married: 'no',
+            job: 'developer',
+        }
+        $scope.interest = {
+            sports: '',
+            music: '',
+            movies: '',
+            books: '',
+            games: '',
+        }
+        $scope.finances = {
+            salary: 0,
+            savings: 0,
+            investments: 0,
+            debt: 0,
+        }
+
+        $scope.prevstep = ($event) => {
+            switch ($event.target.dataset.step) {
+                default:
+                case '2':
+                    $scope.step2 = true;
+                    $scope.step1 = false;
+                    break;
+                case '3':
+                    $scope.step3 = true;
+                    $scope.step2 = false;
+                    break;
+            }
+            if ($event.target.dataset.step == 1) {
+
+            } else if ($event.target.dataset.step == 2) {
+
+            }
+        }
+
+        $scope.nextstep = ($event) => {
+            switch ($event.target.dataset.step) {
+                default:
+                case '1':
+                    $scope.step1 = true;
+                    $scope.step2 = false;
+                    break;
+                case '2':
+                    $scope.step2 = true;
+                    $scope.step3 = false;
+                    break;
+                case '3':
+                    $scope.step3 = true;
+                    $scope.step4 = false;
+                    break;
+            }
+            if ($event.target.dataset.step == 1) {
+
+            } else if ($event.target.dataset.step == 2) {
+
+            }
+        }
+
+        $scope.handleSubmit = () => {
+            // handle submit to send data to server or send email ...
+            $scope.step3 = true;
+            $scope.step4 = false;
+            console.log($scope.user);
+            console.log($scope.interest);
+            console.log($scope.finances);
+        }
+    });
+</script>
+</html>

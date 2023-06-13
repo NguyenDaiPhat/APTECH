@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="parentController">
+    What controller am I? {{parentVariable}}
+    <div ng-controller="childController">
+        What controller am I? {{childVariable}} {{parentVariable}}
+        <button ng-click="childFunction()"> Click me to override! </button>
+    </div>
+</body>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('parentController', function ($scope) {
+        $scope.parentVariable = "I'm the parent";
+    });
+
+    app.controller('childController', function ($scope) {
+        $scope.childVariable = "I'm the child";
+        $scope.childFunction = function () {
+            $scope.parentVariable = "Parent changed!";
+            console.log($scope);
+        };
+    });
+</script>
+
+</html>

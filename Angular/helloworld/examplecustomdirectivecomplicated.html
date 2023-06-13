@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example custom directive</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        <form ng-submit="handlesubmit($event)">
+            <div surveyform name="person1" submit="directiveSubmit"></div>
+        </form>
+        <form ng-submit="handlesubmit($event)">
+            <div surveyform name="person2"></div>
+        </form>
+    </div>
+</body>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myController', function ($scope) {
+        $scope.person1 = {
+            fullname: "John",
+            email: "abc@gmail.com",
+            phonenumber: 1234567890
+        }
+        $scope.person2 = {
+            fullname: "Toanngo92",
+            email: "trienkhaiweb@gmail.com",
+            phonenumber: 2123456789
+        }
+        $scope.handlesubmit = function ($event) {
+            console.log($event);
+            // todo here
+        }
+    });
+    app.directive('surveyform', function () {
+        let directive = {};
+        directive.restrict = 'EAC';
+       directive.templateUrl = 'surveyForm.html';
+     
+        directive.scope = {
+            person: '=name',
+            submit: '='
+        };
+
+        directive.compile = function (element, attributes) {
+           // console.log(element);
+            element.css("border", "1px solid #cccccc");
+            element.css("padding", "10px");
+            //linkFunction is linked with each element with scope to get the element specific data.
+            var linkFunction = function ($scope, element, attributes) {
+            }
+            return linkFunction;
+        }
+
+        return directive;
+    });
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examole Routes AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 15px;
+            align-items: center;
+        }
+
+        .flex-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .list-none {
+            list-style: none;
+        }
+
+        .menu-list {
+            padding: 0px;
+            margin: 0px;
+            justify-content: flex-end;
+        }
+
+        .menu-list li {
+            margin: 0px 5px;
+        }
+
+        .menu-list li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .menu-list li a:hover {
+            color: #46b8e6;
+        }
+
+        .no-margin {
+            margin: 0;
+        }
+
+        .main-header {
+            display: flex;
+            background: #f5f5f5;
+        }
+
+        .logo-wrap {
+            width: 45px;
+        }
+
+        .main-header nav {
+            width: calc(100% - 46px);
+        }
+
+        .main-footer {
+            background: #fa726c;
+        }
+
+        .white {
+            color: #fff;
+        }
+
+        .blue {
+            color: #46b8e6;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="headerController" ng-class="[gc.container, gc.mainheader ,gc.flexwrap]">
+        <div ng-class="gc.logowrap">
+            <h2 ng-class="[gc.nomargin, gc.blue]">{{logotext}}</h2>
+        </div>
+        <nav>
+            <ul ng-class="[gc.flexwrap , gc.listnone, gc.menulist]">
+                <li><a ng-href="#!">Home</a></li>
+                <li><a ng-href="#!about">About</a></li>
+                <li><a ng-href="#!contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div ng-controller="mainController" ng-class="[gc.container, gc.mainbox, gc.flexwrap]">
+        <div ng-view></div>
+    </div>
+    <div ng-controller="footerController" ng-class="[gc.container,gc.flexwrap,gc.mainfooter,gc.white]">
+        {{copyRight}}
+    </div>
+</body>
+<script>
+    var app = angular.module('myApp', ['ngRoute']);
+    app.config(function ($routeProvider) {
+        $routeProvider.
+            when('/', {
+                templateUrl: 'templates/index.html'
+            })
+            .when('/about', {
+                templateUrl: 'templates/about.html'
+            })
+            .when('/contact', {
+                templateUrl: 'templates/contact.html'
+            });
+    });
+    app.run(function ($rootScope) {
+        // global class variable
+        $rootScope.gc = {
+            container: 'container',
+            mainheader: 'main-header',
+            mainfooter: 'main-footer',
+            flexwrap: 'flex-wrap',
+            listnone: 'list-none',
+            menulist: 'menu-list',
+            nomargin: 'no-margin',
+            white: 'white',
+            logowrap: 'logo-wrap',
+            blue: 'blue'
+        };
+    });
+    app.controller('headerController', function ($scope, $location) {
+        $scope.navigation = [
+            {
+                name: 'Home',
+                url: '/',
+                controller: 'mainController'
+            },
+            {
+                name: 'About',
+                url: '/about',
+                controller: 'mainController'
+            },
+            {
+                name: 'Contact',
+                url: '/contact',
+                controller: 'mainController'
+            }
+        ];
+        $scope.logotext = 'web888.vn';
+        
+    });
+    app.controller('mainController', function ($scope, $location) {
+            $scope.homedata = {
+                title: 'Home',
+                description: 'This is home page'
+            };
+            $scope.aboutdata = {
+                title: 'About',
+                description: 'This is about page'
+            };
+            $scope.contactdata = {
+                title: 'Contact',
+                description: 'This is contact page'
+            };
+        });
+    app.controller('footerController', function ($scope) {
+        $scope.copyRight = '@copyright web888.vn';
+    });
+</script>
+</html>
